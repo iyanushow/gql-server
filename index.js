@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 4040;
 const app = express();
 
 app.use(cors());
+app.options("*", cors());
+
 app.use(
   "/",
   graphqlHTTP({
