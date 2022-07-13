@@ -1,0 +1,14 @@
+{
+  "name": "heliserver",
+  "version": "1.0.0",
+  "description": "mock graphql server",
+  "main": "index.js",
+  "author": "shadycodes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.5.0",
+    "nodemon": "^2.0.19"
+  }
+}
