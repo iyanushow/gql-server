@@ -8,8 +8,6 @@ const {
 
 const { transactionData } = require("../data/data.json");
 
-console.log(transactionData);
-
 const TransactionType = new GraphQLObjectType({
   name: "Transaction",
   fields: () => ({
