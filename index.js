@@ -17,11 +17,15 @@ app.use(cors(corsOptions));
 // app.options("*", cors());
 
 app.use(
-  "/",
+  "/gql",
   graphqlHTTP({
     schema: RootSchema,
     graphiql: true,
   })
 );
+
+app.get("/", function (req, res, next) {
+  res.json({ msg: "This is CORS-enabled for an allowed domain." });
+});
 
 app.listen(PORT, () => console.log("GQL server live"));
