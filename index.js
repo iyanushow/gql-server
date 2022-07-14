@@ -8,8 +8,13 @@ const PORT = process.env.PORT || 4040;
 
 const app = express();
 
-app.use(cors());
-app.options("*", cors());
+const corsOptions = {
+  origin: "https://shady-heli.netlify.app/",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.use(cors(corsOptions));
+// app.options("*", cors());
 
 app.use(
   "/",
